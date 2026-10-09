@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.BatteryPet" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/cream</item>
+        <item name="android:colorPrimary">@color/pink</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+    </style>
+
+    <style name="Theme.BatteryPet.Translucent" parent="android:Theme.Translucent.NoTitleBar" />
+</resources>

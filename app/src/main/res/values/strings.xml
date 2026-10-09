@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Battery Pet</string>
+    <string name="subtitle">Pick your pet, style your battery</string>
+    <string name="choose_pet">Choose your pet</string>
+    <string name="choose_theme">Choose a theme</string>
+    <string name="overlay_switch">Show pet on status bar</string>
+    <string name="btn_calibrate">Position the icon</string>
+    <string name="btn_widget">Add widget to home screen</string>
+    <string name="overlay_running">Your pet is on duty</string>
+    <string name="calibrate_hint">Drag the pet over your real battery icon, then press Back</string>
+    <string name="overlay_permission_hint">Please allow "Display over other apps", then turn the switch on again</string>
+    <string name="widget_hint">Long-press your home screen to add the Battery Pet widget</string>
+</resources>
