@@ -17,11 +17,14 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Accept Android licenses
-        run: yes | sdkmanager --licenses > /dev/null || true
-
-      - name: Install Android 36 platform and build tools
-        run: sdkmanager "platforms;android-36" "build-tools;35.0.0"
+      - name: Install Android SDK packages
+        run: |
+          : "${ANDROID_HOME:=/usr/local/lib/android/sdk}"
+          echo "ANDROID_HOME=$ANDROID_HOME" >> "$GITHUB_ENV"
+          SDKMGR="$(ls -d "$ANDROID_HOME"/cmdline-tools/*/bin/sdkmanager 2>/dev/null | head -n 1)"
+          if [ -z "$SDKMGR" ]; then echo "sdkmanager not found"; ls "$ANDROID_HOME" || true; exit 1; fi
+          yes | "$SDKMGR" --licenses > /dev/null || true
+          "$SDKMGR" "platforms;android-36" "build-tools;35.0.0"
 
       - name: Install Gradle 8.10
         run: |
